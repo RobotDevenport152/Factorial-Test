@@ -1,26 +1,48 @@
+# Week 2 - Activity 4: String Manipulation without __init__
+
+# Benefit of using __init__:
+# The __init__ method is useful because it allows you to set and store 
+# attributes when the object is created, eliminating the need to pass 
+# the same data repeatedly to each method. This improves code readability, 
+# reduces repetition, and makes the object’s state easy to manage.
+
 class StringManipulator:
+    def find_character(self, text, char):
+        """
+        Find the position of the given character in the text.
+        Returns the index if found, else -1.
+        """
+        return text.find(char)
 
-    def find_character(self, character):
-        return self.text.find(character)
+    def get_length(self, text):
+        """
+        Return the length of the given text.
+        """
+        return len(text)
 
-    def convert_text_to_uppercase(self,text):
+    def to_uppercase(self, text):
+        """
+        Convert the given text to uppercase and return it.
+        """
         return text.upper()
 
-    def count_text_length(self, text):
-        return len(text)
-    #Create an instance of StringManipulator Class
-name = StringManipulator("example")
+# Create an instance of the StringManipulator class
+manipulator = StringManipulator()
 
-#Call the find_character method on the object
-result = name.find_character('x')
-print(result)
+# Sample text
+text = "example"
 
+# Find a character
+result = manipulator.find_character(text, 'x')
+if result != -1:
+    print(f"The character was found at index {result}")
+else:
+    print("The character was not found in the string.")
 
-# Call the count_text_length method on the object
-text_length = name.count_text_length('example')
-print(text_length)
+# Get the length of the string
+length = manipulator.get_length(text)
+print(f"The length of the string is: {length}")
 
-# Call the convert_text_to_uppercase method on the object
-upper_case_text = name.convert_text_to_uppercase('example')
-print(upper_case_text)
-
+# Convert to uppercase
+uppercase_text = manipulator.to_uppercase(text)
+print(f"The string in uppercase is: {uppercase_text}")
