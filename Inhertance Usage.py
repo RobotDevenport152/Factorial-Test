@@ -39,15 +39,4 @@ class Staff(Person):
         self.pay_rate = pay_rate
 
     def display_info(self):
-        return super().display_info() + f", Tax Code: {self.tax_code}, Pay Rate: {self.pay_rate}"
-
-
-# Example usage
-if __name__ == "__main__":
-    student = Student("Alice", "123 College Rd", 20, "S1001", "B+")
-    academic = Academic("Dr. Smith", "45 University St", 45, "A2001", "TX123", 80000)
-    staff = Staff("John", "78 Campus Ave", 35, "ST3001", "TX456", 25)
-
-    print(student.display_info())
-    print(academic.display_info())
-    print(staff.display_info())
+        return super().display_info() + f", Tax Code: {self.tax_code}, Pay Rate: {self.pay_rate}
