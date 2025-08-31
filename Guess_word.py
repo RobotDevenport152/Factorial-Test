@@ -12,16 +12,11 @@ lives = random.randint(3, len(word_letters))
 
 print("Welcome to the Word Guessing Game!")
 print(" ".join(blanks))
-print(blanks)
+#print(blanks)
 # Step 4: Game loop
 while True:
     # Ask the user to guess a letter
     guess = input("Guess a letter: ").lower()
-
-    # Input validation
-    if len(guess) != 1 or not guess.isalpha():
-        print("Please enter a single alphabetical letter only!")
-        continue
     # Step 5: Is the guessed letter in the word?
     if guess in word_letters:
         # Replace blanks with the letter
