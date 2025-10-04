@@ -2,7 +2,6 @@
 Text Analyzer Module
 Performs simple text analysis: total length, uppercase, digits, and special characters.
 """
-
 class TextAnalyzer:
     """Analyze text for length, uppercase letters, digits, and special characters."""
 
@@ -13,9 +12,9 @@ class TextAnalyzer:
         """Return a dictionary of text statistics."""
         return {
             "total_length": len(self.text),
-            "uppercase_count": sum(ch.isupper() for ch in self.text),
-            "digit_count": sum(ch.isdigit() for ch in self.text),
-            "special_char_count": sum(not ch.isalnum() for ch in self.text),
+            "uppercase_count": sum(char.isupper() for char in self.text),
+            "digit_count": sum(char.isdigit() for char in self.text),
+            "special_char_count": sum(not char.isalnum() for char in self.text),
         }
 
 
