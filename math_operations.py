@@ -1,7 +1,5 @@
 """
 Week 11 Activity 3.py
-Week 11 – Activity 3 (Updated)
-
 This module performs basic arithmetic operations: addition, subtraction, and multiplication.
 It includes examples for doctesting and can also be tested using unittest.
 Doctest examples:
